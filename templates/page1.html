@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>어휘력이 독해력이다 4B</title>
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/choice.css">
+    <link rel="stylesheet" href="./static/css/theme.css">
+</head>
+<body>
+    <!-- 헤더 부분 -->
+    <div class="header">
+        <div class="number-box">
+            <div class="number">01</div>
+            <div class="triangle"></div>
+        </div>
+        <div class="title-box">
+            <div class="title">혹부리 영감</div>
+        </div>
+        <div class="activity-button">
+            <img src="./static/images/base/act_choice.svg" alt="단어선택 활동">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="instruction">
+            <div class="step-number">1</div>
+            <div class="step-text">다음 설명에 알맞은 말을 골라 보세요.</div>
+        </div>
+        <!-- 문제 세트가 동적으로 들어가는 영역 -->
+        <div id="problems-wrapper"></div>
+    </div>
+    
+    <!-- 정답 팝업 -->
+    <div id="correct-popup" class="feedback-popup correct-popup" style="display:none;">
+        <div class="popup-content">
+            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
+        </div>
+    </div>
+    
+    <!-- 오답 팝업 -->
+    <div id="incorrect-popup" class="feedback-popup incorrect-popup" style="display:none;">
+        <div class="popup-content">
+            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
+        </div>
+    </div>
+    
+    <!-- 결과 팝업 -->
+    <div id="result-popup" class="feedback-popup" style="display:none;">
+        <div class="popup-content">
+            <div class="popup-title">참 잘했어요!</div>
+            <div>모든 문제를 다 풀었습니다!</div>
+            <button id="restart-btn">다시 시작</button>
+        </div>
+    </div>
+
+    <script src="./static/js/theme.js"></script>
+    <script src="./static/js/page1.js"></script>
+</body>
+</html>

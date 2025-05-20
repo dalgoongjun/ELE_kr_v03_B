@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean Learning Interface</title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <div class="number">01</div>
+            <div class="title">흑부리 영감</div>
+        </div>
+        <div class="buttons">
+            <div class="btn active">활동</div>
+            <div class="btn inactive">낱말 고르기</div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-instruction">다음 설명에 알맞은 말을 골라보세요.</div>
+        </div>
+        
+        <div class="exercise-container">
+            <div class="question-number">문제 <span id="current-question">1</span>/4</div>
+            
+            <div class="exercise-content">
+                <div class="pic-section">
+                    <img id="question-image" src="./static/images/unit01" alt="질문 이미지">
+                </div>
+                <div class="question-section">
+                    <p id="question-text">여기에 문제 내용이 들어갑니다. 위 그림을 보고 알맞은 단어를 선택하세요.</p>
+                </div>
+            </div>
+            
+            <div class="answers-container">
+                <div class="answer-option" data-index="0">첫번째 단어</div>
+                <div class="answer-option" data-index="1">두번째 단어</div>
+                <div class="answer-option" data-index="2">세번째 단어</div>
+                <div class="answer-option" data-index="3">네번째 단어</div>
+            </div>
+            
+            <div id="feedback-message" class="feedback hidden"></div>
+        </div>
+    </div>
+    
+    <div id="completion-popup" class="popup hidden" style="display:none;">
+        <div class="popup-content">
+            <h2>참 잘했어요!</h2>
+            <p>모든 문제를 성공적으로 완료했습니다.</p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+    </div>
+    
+    <script src="./static/js/script.js"></script>
+</body>
+</html>

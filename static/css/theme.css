@@ -1,0 +1,103 @@
+/* 
+ * 색상 테마 시스템
+ * 각 테마별 색상 변수와 관련 클래스 정의
+ */
+
+ :root {
+    /* 기본 색상 (파란색) */
+    --theme-color: #3498db;
+    --theme-color-light: rgba(166, 212, 242, 0.5); /* 라디오 버튼 배경용 반투명 색상 */
+}
+
+/* 파란색 테마 */
+body.theme-blue {
+    --theme-color: #3498db;
+    --theme-color-light: rgba(166, 212, 242, 0.5);
+}
+
+/* 초록색 테마 */
+body.theme-green {
+    --theme-color: #45a490;
+    --theme-color-light: rgba(138, 219, 202, 0.5);
+}
+
+/* 보라색 테마 */
+body.theme-purple {
+    --theme-color: #8e81bc;
+    --theme-color-light: rgba(191, 185, 222, 0.5);
+}
+
+/* 갈색 테마 */
+body.theme-brown {
+    --theme-color: #d5926d;
+    --theme-color-light: rgba(230, 186, 165, 0.5);
+}
+
+/* 테마 적용된 요소들 */
+
+/* base.css 요소들 */
+.title-box {
+    background-color: var(--theme-color);
+}
+
+.step-number {
+    color: var(--theme-color);
+}
+
+.box-inline {
+    background-color: var(--theme-color);
+}
+
+/* lingdrawing.css 요소들 */
+.question-radio,
+.answer-radio {
+    background-color: var(--theme-color-light);
+}
+
+.question-radio:checked::after,
+.answer-radio:checked::after {
+    background-color: var(--theme-color);
+}
+
+/* dragdrop.css 요소들 */
+.question-box {
+    border: 1px solid var(--theme-color);
+}
+
+.question-box::before {
+    background-color: var(--theme-color);
+}
+
+.blank-area {
+    border: 2px dotted var(--theme-color);
+}
+
+.blank-area.dragover {
+    border: 2px dotted var(--theme-color);
+}
+/* choice.css 요소들 */
+.select {
+    border: 2pt dotted var(--theme-color);
+}
+
+
+/* 네비게이션 이미지 경로 변경을 위한 속성 */
+body.theme-blue {
+    --prev-image: url('../images/base/page_prev_blue.svg');
+    --next-image: url('../images/base/page_next_blue.svg');
+}
+
+body.theme-green {
+    --prev-image: url('../images/base/page_prev_green.svg');
+    --next-image: url('../images/base/page_next_green.svg');
+}
+
+body.theme-purple {
+    --prev-image: url('../images/base/page_prev_purple.svg');
+    --next-image: url('../images/base/page_next_purple.svg');
+}
+
+body.theme-brown {
+    --prev-image: url('../images/base/page_prev_brown.svg');
+    --next-image: url('../images/base/page_next_brown.svg');
+}
