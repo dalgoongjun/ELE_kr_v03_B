@@ -1,29 +1,25 @@
-// 문제 데이터 (이미지, 품사, 문제, 보기는 원하는 내용/경로로 교체)
+// 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
       image: './static/images/unit01/humming.svg',
-      pos: '명사',
       question: '흥부가 좋아하는 것은 무엇일까요?',
       answers: ['고양이', '뼈다귀', '우유', '사과'],
       correct: 1,
     },
     {
       image: './static/images/unit01/hurriedly.svg',
-      pos: '명사',
       question: '빨간색이며 과일인 것은 무엇인가요?',
       answers: ['감자', '바나나', '사과', '오이'],
       correct: 2,
     },
     {
       image: './static/images/unit01/noisy.svg',
-      pos: '동사',
       question: '흥부가 좋아하는 것은 무엇일까요?',
       answers: ['고양이', '뼈다귀', '우유', '사과'],
       correct: 0,
     },
     {
       image: './static/images/unit01/twirly.svg',
-      pos: '형용사',
       question: '흥부가 좋아하는 것은 무엇일까요?',
       answers: ['고양이', '뼈다귀', '우유', '사과'],
       correct: 1,
@@ -76,7 +72,6 @@ const problems = [
         <div class="question-container">
             <div class="pic1"><img src="${p.image}" alt="문제이미지"></div>
             <div class="question-area">
-                <span class="pos-box">${p.pos}</span>
                 <span class="question-text">${p.question}</span>
             </div>
         </div>
