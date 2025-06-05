@@ -1,0 +1,365 @@
+/* 기본 CSS 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    color: white;
+    position: relative;
+    height: 13.6vh;
+}
+
+.number-box {
+    background-color: #000000;
+    width: calc(13.6vh * 1.3);
+    /* 헤더 높이(13.6vh)의 1.3배 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.number {
+    font-size: calc(13.6vh * 0.7);
+    /* 헤더 높이의 70% */
+    font-weight: bold;
+}
+
+.triangle {
+    position: absolute;
+    right: -4.4vh;
+    /* 삼각형 높이(4vh)의 1.1배 */
+    top: 35%;
+    width: 0;
+    height: 0;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 4.4vh solid #000000;
+    /* 삼각형 높이(4vh)의 1.1배 */
+    z-index: 2;
+}
+
+.title-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #000, #4A90E2);
+}
+
+.title {
+    font-size: calc(13.6vh * 0.4);
+    /* 헤더 높이의 40% */
+    font-weight: bold;
+    margin-left: calc(4.4vh + 2vh);
+    /* 삼각형 너비 + 20px 간격 */
+}
+
+.activity-button {
+    position: absolute;
+    right: 2vw;
+    /* reset-button의 너비 + 1vw 간격 + 오른쪽 여백 */
+    top: 50%;
+    /* 헤더의 세로 중앙 */
+    transform: translateY(-50%);
+    /* 수직 중앙 정렬 */
+    width: calc(13.6vh * 1.8);
+    /* 헤더 높이의 55% */
+    height: calc(13.6vh * 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    color: #333;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.content {
+    padding: 0;
+    /* 좌우 패딩 제거 */
+    padding-bottom: 20px;
+    /* 하단 패딩만 유지 */
+}
+
+.instruction {
+    height: 8vh;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    /* 뷰포트 너비의 5% 왼쪽 여백 추가 */
+    z-index: 10;
+}
+
+.step-number {
+    font-size: calc(8vh * 0.9);
+    font-weight: bold;
+    margin-right: 1vw;
+    color: #4A90E2;
+}
+
+.step-text {
+    font-size: calc(8vh * 0.35);
+    color: #333;
+}
+
+/* 문제에 들어가는 박스 글자 */
+.box-inline {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    color: white;
+    font-weight: bold;
+    border-radius: 1em;
+    font-size: 0.9em;
+    vertical-align: middle;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+/* 결과 팝업 스타일 */
+.result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 50vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* 클릭 이벤트가 통과하도록 설정 */
+}
+
+.result-popup img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 페이지별 추가 스타일 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.question-area {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.question-image {
+    width: 200px;
+    height: 200px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+
+.question-description {
+    font-size: 28px;
+    color: #333;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.answer-button {
+    background: white;
+    border: 3px dashed #4A90E2;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-button:hover {
+    background: #f0f8ff;
+    transform: translateY(-2px);
+}
+
+.sentence-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    position: relative;
+}
+
+.sentence-text {
+    margin-right: 20px;
+}
+
+.answer-options {
+    display: flex;
+    gap: 20px;
+}
+
+.answer-option {
+    background: white;
+    border: 3px dashed #4A90E2;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.answer-option:hover {
+    background: #f0f8ff;
+}
+
+.answer-mark {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff4444;
+    z-index: 10;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 90%;
+}
+
+.popup-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.correct-popup .popup-image {
+    background: #4CAF50;
+    color: white;
+}
+
+.incorrect-popup .popup-image {
+    background: #f44336;
+    color: white;
+}
+
+.completion-popup .popup-image {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: white;
+}
+
+.popup-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.popup-button {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-button:hover {
+    background: #357ABD;
+}
+
+.popup-button.secondary {
+    background: #666;
+}
+
+.popup-button.secondary:hover {
+    background: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.page-indicator {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #4A90E2;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 926px) {
+    .step-number {
+        font-size: 8vh;
+    }
+
+    .step-text {
+        font-size: calc(8vh * 0.5);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .step-text {
+        font-size: calc(8vh * 0.4);
+    }
+}

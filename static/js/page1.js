@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit01/humming.svg',
-      question: '흥부가 좋아하는 것은 무엇일까요?',
-      answers: ['고양이', '뼈다귀', '우유', '사과'],
-      correct: 1,
-    },
-    {
       image: './static/images/unit01/hurriedly.svg',
-      question: '빨간색이며 과일인 것은 무엇인가요?',
-      answers: ['감자', '바나나', '사과', '오이'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit01/noisy.svg',
-      question: '흥부가 좋아하는 것은 무엇일까요?',
-      answers: ['고양이', '뼈다귀', '우유', '사과'],
+      question: '정신을 차릴 수 없을 만큼 이리저리 헤매며 다급하게 서두르는 모양.',
+      answers: ['허둥지둥', '꼬불꼬불', '흥얼흥얼', '왁자지껄'],
       correct: 0,
     },
     {
       image: './static/images/unit01/twirly.svg',
-      question: '흥부가 좋아하는 것은 무엇일까요?',
-      answers: ['고양이', '뼈다귀', '우유', '사과'],
+      question: '모양이 곧지 않고 이리저리 구부러진 모양.',
+      answers: ['허둥지둥', '꼬불꼬불', '흥얼흥얼', '왁자지껄'],
       correct: 1,
+    },
+    {
+      image: './static/images/unit01/humming.svg',
+      question: '흥이 나거나 기분이 좋아서 입속으로 계속 노래를 부르는 소리. 또는 그 모양.',
+      answers: ['허둥지둥', '꼬불꼬불', '흥얼흥얼', '왁자지껄'],
+      correct: 2,
+    },
+    {
+      image: './static/images/unit01/noisy.svg',
+      question: '여럿이 한데 모여 시끄럽게 떠들고 지껄이는 소리. 또는 그 모양.',
+      answers: ['허둥지둥', '꼬불꼬불', '흥얼흥얼', '왁자지껄'],
+      correct: 3,
     },
   ];
   

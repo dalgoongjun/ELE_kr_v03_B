@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흑부리 영감 - 1단계</title>
+    <link rel="stylesheet" href="./static/css/style_claude.css">
+</head>
+<body>
+    <div class="header">
+        <div class="number-box">
+            <div class="number">01</div>
+            <div class="triangle"></div>
+        </div>
+        <div class="title-box">
+            <div class="title">흑부리 영감</div>
+        </div>
+        <div class="activity-button">
+            활동 | 낱말 그리기
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="page-indicator">1</div>
+        
+        <div class="instruction">
+            <div class="step-number">1</div>
+            <div class="step-text">다음 설명에 알맞은 말을 골라보세요.</div>
+        </div>
+        
+        <div class="question-area">
+            <div class="question-image" id="questionImage">👨‍🌾</div>
+            <div class="question-description" id="questionDescription">
+                정신을 차릴 수 없을 만큼 이리저리 헤매며<br>
+                다급하게 서두르는 모양.
+            </div>
+        </div>
+
+        <div class="answer-grid">
+            <button class="answer-button" data-answer="허둥지둥">허둥지둥</button>
+            <button class="answer-button" data-answer="꼴볼꼴볼">꼴볼꼴볼</button>
+            <button class="answer-button" data-answer="홀얼홀얼">홀얼홀얼</button>
+            <button class="answer-button" data-answer="와자지껄">와자지껄</button>
+        </div>
+    </div>
+
+    <!-- 정답 팝업 -->
+    <div id="correctPopup" class="popup-overlay hidden">
+        <div class="popup correct-popup">
+            <div class="popup-image">✓</div>
+            <h2>정답입니다!</h2>
+        </div>
+    </div>
+
+    <!-- 오답 팝업 -->
+    <div id="incorrectPopup" class="popup-overlay hidden">
+        <div class="popup incorrect-popup">
+            <div class="popup-image">✗</div>
+            <h2>다시 생각해보세요!</h2>
+        </div>
+    </div>
+
+    <!-- 완료 팝업 -->
+    <div id="completionPopup" class="popup-overlay hidden">
+        <div class="popup completion-popup">
+            <div class="popup-image">🎉</div>
+            <h2>참 잘했어요!</h2>
+            <div class="popup-buttons">
+                <button class="popup-button" onclick="restartGame()">다시 시작</button>
+                <button class="popup-button" onclick="goToNextPage()">다음 문제</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/page1_claude.js"></script>
+</body>
+</html>

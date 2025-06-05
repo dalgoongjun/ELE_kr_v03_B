@@ -84,7 +84,7 @@ body {
 .content {
     padding: 0;
     /* 좌우 패딩 제거 */
-    padding-bottom: 20px;
+    padding-bottom: 5vh;
     /* 하단 패딩만 유지 */
 }
 
@@ -95,6 +95,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: 5vw;
+    margin-right: 5vw;
     /* 뷰포트 너비의 5% 왼쪽 여백 추가 */
     z-index: 10;
 }
