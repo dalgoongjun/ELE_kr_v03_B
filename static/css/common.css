@@ -146,20 +146,6 @@ body.theme-brown {
     font-size: calc(10vh * 0.3);
 }
 
-/* 문제에 들어가는 박스 글자 */
-.box-inline {
-    display: inline-block;
-    padding: 0.2em 0.6em;
-    color: white;
-    font-weight: bold;
-    border-radius: 1em;
-    font-size: 0.9em;
-    vertical-align: middle;
-    margin-left: 0.1em;
-    margin-right: 0.1em;
-    background-color: var(--theme-color);
-}
-
 /* 결과 팝업 스타일 */
 .result-popup {
     position: fixed;
@@ -192,8 +178,6 @@ body.theme-brown {
     align-items: center;
     justify-content: center;
     z-index: 2000;
-    background: rgba(0,0,0,0.2);
-    animation: popup-fade 1s ease-in-out;
 }
 
 .popup-content {
@@ -216,7 +200,7 @@ body.theme-brown {
 #result-popup .popup-content {
     background: #fff;
     border-radius: 1rem;
-    padding: 4vh 6vw;
+    /* padding: 4vh 6vw; */
     box-shadow: 0 0.5rem 1.875rem rgba(0,0,0,0.16);
     flex-direction: column;
     align-items: center;
@@ -227,12 +211,10 @@ body.theme-brown {
 .popup-title {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2vh;
     text-align: center;
 }
 
 #restart-btn {
-    margin-top: 2vh;
     background: var(--theme-color);
     color: #fff;
     border: none;

@@ -81,25 +81,7 @@
     max-width: 15vw;
 }
 
-.answer:hover {
-    background: var(--theme-color-light, #e8f0fe);
-    transform: scale(1.03);
-}
 
-.answer.selected {
-    background: var(--theme-color-light, #e8f0fe);
-    border-color: var(--theme-color, #3498db);
-}
-
-.answer.correct {
-    background: #b8e986 !important;
-    border-color: #43a047 !important;
-}
-
-.answer.incorrect {
-    background: #ffcdd2 !important;
-    border-color: #e53935 !important;
-}
 
 
 /* 모바일 대응 */
