@@ -62,16 +62,29 @@ function generateSentences() {
         sentenceRow.className = 'sentence-row';
         sentenceRow.dataset.sentence = index;
         
-        sentenceRow.innerHTML = `
-            <span class="sentence-text">${sentence.prefix}</span>
+        // prefix와 suffix 존재 여부에 따라 HTML 구성
+        let htmlContent = '';
+        
+        // prefix가 있으면 추가
+        if (sentence.prefix && sentence.prefix.trim() !== '') {
+            htmlContent += `<span class="sentence-text prefix-text">${sentence.prefix}</span>`;
+        }
+        
+        // answer-options는 항상 추가
+        htmlContent += `
             <div class="answer-options">
                 ${sentence.options.map(option => 
                     `<div class="answer-option" data-answer="${option.text}" data-correct="${option.correct}">${option.text}</div>`
                 ).join('')}
             </div>
-            <span class="sentence-text">${sentence.suffix}</span>
         `;
         
+        // suffix가 있으면 추가
+        if (sentence.suffix && sentence.suffix.trim() !== '') {
+            htmlContent += `<span class="sentence-text suffix-text">${sentence.suffix}</span>`;
+        }
+        
+        sentenceRow.innerHTML = htmlContent;
         sentencesArea.appendChild(sentenceRow);
     });
 }
