@@ -47,14 +47,13 @@
 .question-counter {
     font-size: 1.2rem;
     color: var(--theme-color);
-    margin-bottom: 1vh;
     font-weight: bold;
     text-align: left;
     width: 100%;
 }
 
 .question-text {
-    font-size: 1.6rem; /* 1.6em → 1.6rem */
+    font-size: 2rem; /* 1.6em → 1.6rem */
     text-align: left;
     width: 100%;    
 }
@@ -79,6 +78,7 @@
     text-align: center;
     flex: 1;
     max-width: 15vw;
+    font-weight: bold;
 }
 
 

@@ -43,6 +43,14 @@ const answeredQuestions = new Set();
 document.addEventListener('DOMContentLoaded', function() {
     generateSentences();
     setupEventListeners();
+    
+    // 결과 화면에서 다시 시작 버튼
+    document.getElementById('restart-btn').onclick = resetQuiz;
+    
+    // 이전 문제 버튼
+    document.getElementById('nav-btn').onclick = function() {
+        window.location.href = 'page1.html';
+    };
 });
 
 // 문장들 동적 생성
@@ -92,7 +100,7 @@ function handleAnswer(selectedOption, sentenceIndex, isCorrect) {
     
     if (isCorrect) {
         // 정답 처리
-        showCorrectMark(selectedOption);
+        showCorrectImage(selectedOption);
         correctAnswers++;
         answeredQuestions.add(sentenceIndex);
         
@@ -107,25 +115,25 @@ function handleAnswer(selectedOption, sentenceIndex, isCorrect) {
         // 모든 문제를 맞혔는지 확인
         if (correctAnswers === totalQuestions) {
             setTimeout(() => {
-                showCompletionPopup();
+                showResultPopup();
             }, 1000);
         }
     } else {
         // 오답 처리
-        showIncorrectMark(selectedOption);
+        showIncorrectImage(selectedOption);
         setTimeout(() => {
-            hideIncorrectMark(selectedOption);
+            hideIncorrectImage(selectedOption);
         }, 1500);
     }
 }
 
-// 정답 표시 (빨간 동그라미)
-function showCorrectMark(option) {
-    const mark = document.createElement('div');
-    mark.className = 'answer-mark';
-    mark.innerHTML = '⭕';
-    mark.style.color = '#ff4444';
-    option.appendChild(mark);
+// 정답 이미지 표시
+function showCorrectImage(option) {
+    const image = document.createElement('img');
+    image.className = 'answer-result-image';
+    image.src = './static/images/base/pencil_correct.svg';
+    image.alt = '정답';
+    option.appendChild(image);
     
     // 선택된 옵션 스타일 변경
     option.style.backgroundColor = '#e8f5e8';
@@ -133,63 +141,53 @@ function showCorrectMark(option) {
     option.style.pointerEvents = 'none';
 }
 
-// 오답 표시 (빨간 X)
-function showIncorrectMark(option) {
-    const mark = document.createElement('div');
-    mark.className = 'answer-mark';
-    mark.innerHTML = '❌';
-    mark.style.color = '#ff4444';
-    option.appendChild(mark);
+// 오답 이미지 표시
+function showIncorrectImage(option) {
+    const image = document.createElement('img');
+    image.className = 'answer-result-image';
+    image.src = './static/images/base/pencil_incorrect.svg';
+    image.alt = '오답';
+    option.appendChild(image);
     
     // 선택된 옵션 임시 스타일 변경
     option.style.backgroundColor = '#ffe8e8';
     option.style.borderColor = '#f44336';
 }
 
-// 오답 표시 제거
-function hideIncorrectMark(option) {
-    const mark = option.querySelector('.answer-mark');
-    if (mark) {
-        mark.remove();
+// 오답 이미지 제거
+function hideIncorrectImage(option) {
+    const image = option.querySelector('.answer-result-image');
+    if (image) {
+        image.remove();
     }
     
     // 스타일 원복
     option.style.backgroundColor = 'white';
-    option.style.borderColor = '#4A90E2';
+    option.style.borderColor = 'var(--theme-color, #3498db)';
 }
 
-// 완료 팝업 표시
-function showCompletionPopup() {
-    document.getElementById('completionPopup').classList.remove('hidden');
+// 결과 팝업 표시
+function showResultPopup() {
+    document.getElementById('result-popup').style.display = 'flex';
 }
 
-// 팝업 숨기기
-function hidePopup(popupId) {
-    document.getElementById(popupId).classList.add('hidden');
-}
-
-// 게임 다시 시작
-function restartGame() {
+// 퀴즈 초기화
+function resetQuiz() {
     correctAnswers = 0;
     answeredQuestions.clear();
     
     // 모든 답안 옵션 초기화
     const answerOptions = document.querySelectorAll('.answer-option');
     answerOptions.forEach(option => {
-        const mark = option.querySelector('.answer-mark');
-        if (mark) {
-            mark.remove();
+        const image = option.querySelector('.answer-result-image');
+        if (image) {
+            image.remove();
         }
         option.style.backgroundColor = 'white';
-        option.style.borderColor = '#4A90E2';
+        option.style.borderColor = 'var(--theme-color, #3498db)';
         option.style.pointerEvents = 'auto';
         option.style.opacity = '1';
     });
     
-    hidePopup('completionPopup');
-}
-
-// 이전 페이지로 이동
-function goToPreviousPage() {
-    window.location.href = 'page1_1.html';
+    document.getElementById('result-popup').style.display = 'none';
 }

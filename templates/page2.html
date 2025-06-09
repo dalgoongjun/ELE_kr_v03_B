@@ -2,20 +2,19 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>어휘력이 독해력이다 4B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흑부리 영감 - 2단계</title>
     <link rel="stylesheet" href="./static/css/common.css">
-    <link rel="stylesheet" href="./static/css/style_claude.css">
+    <link rel="stylesheet" href="./static/css/select.css">
 </head>
 <body>
-    <!-- 헤더 부분 -->
     <div class="header">
         <div class="number-box">
             <div class="number">01</div>
             <div class="triangle"></div>
         </div>
         <div class="title-box">
-            <div class="title">혹부리 영감</div>
+            <div class="title">흑부리 영감</div>
         </div>
         <div class="activity-button">
             <img src="./static/images/base/act_choice.svg" alt="단어선택 활동">
@@ -27,24 +26,12 @@
             <div class="step-number">2</div>
             <div class="step-text">바른 문장이 되도록 알맞은 말을 골라 보세요.</div>
         </div>
-        <!-- 문제 세트가 동적으로 들어가는 영역 -->
-        <div id="problems-wrapper"></div>
-    </div>
-    
-    <!-- 정답 팝업 -->
-    <div id="correct-popup" class="popup correct-popup" style="display:none;">
-        <div class="popup-content">
-            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
+        
+        <div class="sentences-area" id="sentencesArea">
+            <!-- 문장들이 JavaScript로 동적 생성됩니다 -->
         </div>
     </div>
-    
-    <!-- 오답 팝업 -->
-    <div id="incorrect-popup" class="popup incorrect-popup" style="display:none;">
-        <div class="popup-content">
-            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
-        </div>
-    </div>
-    
+
     <!-- 결과 팝업 -->
     <div id="result-popup" class="popup result-popup" style="display:none;">
         <div class="popup-content">
@@ -56,8 +43,7 @@
         </div>
     </div>
 
-    <script src="./static/js/theme.js"></script>
+    <script src="./static/js/page2.js"></script>
     <script src="./static/js/orientation-lock.js"></script>
-    <script src="./static/js/page2_claude.js"></script>
 </body>
 </html>
