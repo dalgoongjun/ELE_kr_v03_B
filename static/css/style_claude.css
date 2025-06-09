@@ -210,8 +210,10 @@ body {
 .sentence-row {
     display: flex;
     align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 1.6rem;
     position: relative;
 }
 
@@ -222,6 +224,7 @@ body {
 .answer-options {
     display: flex;
     gap: 20px;
+    margin-right: 20px;
 }
 
 .answer-option {

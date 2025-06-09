@@ -1,5 +1,4 @@
-/*단어 선택 css*/
-
+/* 단어 선택 전용 CSS - rem 단위로 통일 */
 
 .problem-set {
     display: flex;
@@ -24,8 +23,6 @@
 .pic1 {
     width: 40vh;
     height: 40vh;
-    /*margin-right: 2vw;
-    margin-bottom: 3vh; */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -42,13 +39,24 @@
 .question-area {
     flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 1vw;
 }
 
-.question-text {
-    font-size: 1.6em;
+.question-counter {
+    font-size: 1.2rem;
+    color: var(--theme-color);
+    margin-bottom: 1vh;
+    font-weight: bold;
     text-align: left;
+    width: 100%;
+}
+
+.question-text {
+    font-size: 1.6rem; /* 1.6em → 1.6rem */
+    text-align: left;
+    width: 100%;    
 }
 
 .answers {
@@ -62,9 +70,9 @@
 .answer {
     background: #fff;
     border: 2px dotted var(--theme-color, #3498db);
-    border-radius: 10px;
-    padding: 1em 2em;
-    font-size: 1.5em;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5vh;
     cursor: pointer;
     transition: all 0.2s;
@@ -126,28 +134,32 @@
 
 .result-popup .popup-content {
     background: #fff;
-    border-radius: 16px;
+    border-radius: 1rem;
     padding: 4vh 6vw;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.16);
+    box-shadow: 0 0.5rem 1.875rem rgba(0,0,0,0.16);
     width: 100%;
     height: 100%;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
 }
 
 .popup-title {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2vh;
+    text-align: center;
 }
 
 #restart-btn {
     margin-top: 2vh;
-    background: var(--theme-color, #3498db);
+    background: var(--theme-color);
     color: #fff;
     border: none;
-    border-radius: 10px;
-    padding: 1em 2.5em;
-    font-size: 1em;
+    border-radius: 0.625rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -159,7 +171,7 @@
 }
 
 /* 모바일 대응 */
-@media only screen and (max-width: 926px) {
+@media only screen and (max-width: 932px) {
     .problem-set {
         flex-direction: column;
         align-items: flex-start;
@@ -172,16 +184,25 @@
     
     .answer {
         max-width: 100%;
-        font-size: 1em;
+        font-size: 1.2rem; /* 1em → 1rem */
         max-width: 15vw;
     }
     
     .pic1 {
         margin-bottom: 1vh;
         margin-right: 0;
+        width: 40vh;
+        height: 40vh;
     }
     
     .question-area {
         margin-bottom: 1vh;
+    }
+    .question-counter {
+        font-size: 1rem;
+    }
+
+    .question-text {
+        font-size: 1.2rem; /* 모바일에서 텍스트 크기 조정 */
     }
 }
