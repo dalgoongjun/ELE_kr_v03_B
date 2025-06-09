@@ -181,6 +181,76 @@ body.theme-brown {
     object-fit: contain;
 }
 
+/* 피드백 팝업 스타일 */
+.feedback-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    background: rgba(0,0,0,0.2);
+    animation: popup-fade 1s ease-in-out;
+}
+
+.popup-content {
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: row;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.result-popup .popup-content {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 4vh 6vw;
+    box-shadow: 0 0.5rem 1.875rem rgba(0,0,0,0.16);
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.popup-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+#restart-btn {
+    margin-top: 2vh;
+    background: var(--theme-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.625rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@keyframes popup-fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* 방향 경고 메시지 스타일 */
 #orientation-warning {
     position: fixed;
