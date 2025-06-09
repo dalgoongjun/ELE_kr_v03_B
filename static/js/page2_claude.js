@@ -4,7 +4,7 @@ const sentences = [
         prefix: "도깨비들이",
         suffix: "떠들어요.",
         options: [
-            { text: "와자지껄", correct: true },
+            { text: "왁자지껄", correct: true },
             { text: "허둥지둥", correct: false }
         ]
     },
@@ -13,7 +13,7 @@ const sentences = [
         suffix: "노래를 불러요.",
         options: [
             { text: "엉금엉금", correct: false },
-            { text: "홀얼홀얼", correct: true }
+            { text: "흥얼흥얼", correct: true }
         ]
     },
     {
@@ -28,7 +28,7 @@ const sentences = [
         prefix: "흑부리 영감이",
         suffix: "한 산길을 걸어요.",
         options: [
-            { text: "꼴볼꼴볼", correct: true },
+            { text: "꼬불꼬불", correct: true },
             { text: "보들보들", correct: false }
         ]
     }

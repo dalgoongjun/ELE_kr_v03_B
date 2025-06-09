@@ -59,7 +59,7 @@ const problems = [
     
     // 모든 문제를 풀었는지 확인
     if (currentProblemIndex >= problems.length) {
-      showResultPopup();
+      showResultPopup('next');
       return;
     }
     
@@ -130,7 +130,7 @@ const problems = [
         popup.style.display = 'none';
         currentProblemIndex++;
         if (currentProblemIndex >= problems.length) {
-          showResultPopup();
+          showResultPopup('next');
       } else {
           renderCurrentProblem();
       }
@@ -157,12 +157,24 @@ const problems = [
   }
   
   // 결과 팝업 표시
-  function showResultPopup() {
+  function showResultPopup(direction = 'next') {
     // 모든 다른 팝업이 표시되지 않도록 확인
     document.getElementById('correct-popup').style.display = 'none';
     document.getElementById('incorrect-popup').style.display = 'none';
-    
-    // 결과 팝업 표시
+  
+    const navBtn = document.getElementById('nav-btn');
+    if (direction === 'prev') {
+      navBtn.textContent = '이전 문제';
+      navBtn.onclick = () => {
+        window.location.href = 'page1.html';
+      };
+    } else {
+      navBtn.textContent = '다음 문제';
+      navBtn.onclick = () => {
+        window.location.href = 'page2.html';
+      };
+    }
+  
     document.getElementById('result-popup').style.display = 'flex';
   }
   
