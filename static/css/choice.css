@@ -124,6 +124,7 @@
     justify-content: center;
     text-align: center;
     position: relative;
+    flex-direction: row;
 }
 
 .popup-content img {
