@@ -168,11 +168,11 @@ body.theme-brown {
     transform: translate(-50%, -50%);
     width: 50vh;
     height: 50vh;
-    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
-    pointer-events: none;
+    /* pointer-events: none; */
+    justify-content: center;
+    z-index: 1000;
 }
 
 .result-popup img {
@@ -237,7 +237,7 @@ body.theme-brown {
     color: #fff;
     border: none;
     border-radius: 0.625rem;
-    padding: 1rem 2.5rem;
+    padding: 0.5rem;
     font-size: 1.2rem;
     cursor: pointer;
 }

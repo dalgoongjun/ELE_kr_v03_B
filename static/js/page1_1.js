@@ -129,7 +129,11 @@ const problems = [
     setTimeout(() => {
         popup.style.display = 'none';
         currentProblemIndex++;
-        renderCurrentProblem();
+        if (currentProblemIndex >= problems.length) {
+          showResultPopup();
+      } else {
+          renderCurrentProblem();
+      }
     }, 1000);
   }
   
