@@ -28,6 +28,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    border-radius: 1rem;
 }
 
 .pic1 img {

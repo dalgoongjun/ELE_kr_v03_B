@@ -147,8 +147,6 @@ function showCorrectImage(option) {
     option.appendChild(image);
     
     // 선택된 옵션 스타일 변경
-    option.style.backgroundColor = '#e8f5e8';
-    option.style.borderColor = '#4CAF50';
     option.style.pointerEvents = 'none';
 }
 
@@ -161,8 +159,6 @@ function showIncorrectImage(option) {
     option.appendChild(image);
     
     // 선택된 옵션 임시 스타일 변경
-    option.style.backgroundColor = '#ffe8e8';
-    option.style.borderColor = '#f44336';
 }
 
 // 오답 이미지 제거
@@ -172,9 +168,7 @@ function hideIncorrectImage(option) {
         image.remove();
     }
     
-    // 스타일 원복
-    option.style.backgroundColor = 'white';
-    option.style.borderColor = 'var(--theme-color, #3498db)';
+    // 스타일 원복 - 색상 변경 없음
 }
 
 // 결과 팝업 표시
@@ -194,8 +188,6 @@ function resetQuiz() {
         if (image) {
             image.remove();
         }
-        option.style.backgroundColor = 'white';
-        option.style.borderColor = 'var(--theme-color, #3498db)';
         option.style.pointerEvents = 'auto';
         option.style.opacity = '1';
     });

@@ -1,35 +1,34 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "도깨비들이",
-        suffix: "떠들어요.",
+        prefix: "혼자 살아가는",
+        suffix: "로 곡식을 수확했어요.",
         options: [
-            { text: "왁자지껄", correct: true },
-            { text: "허둥지둥", correct: false }
+            { text: "1인 가구", correct: true },
+            { text: "고령화", correct: false }
         ]
     },
     {
-        prefix: "흑부리 영감이",
-        suffix: "노래를 불러요.",
+        prefix: "국적과 문화가 다른 사람들이 함께 사는",
+        suffix: "을 쉽게 볼 수 있어요.",
         options: [
-            { text: "엉금엉금", correct: false },
-            { text: "흥얼흥얼", correct: true }
+            { text: "다문화 가족", correct: true },
+            { text: "1인 가구", correct: false }
         ]
     },
     {
-        prefix: "흑부리 영감이",
-        suffix: "뛰어가요.",
+        suffix: "는 일정한 지역에 사는 사람의 수예요.",
         options: [
-            { text: "허둥지둥", correct: true },
-            { text: "힐끗힐끗", correct: false }
+            { text: "다문화 가족", correct: false },
+            { text: "인구", correct: true }
         ]
     },
     {
-        prefix: "흑부리 영감이",
-        suffix: "한 산길을 걸어요.",
+        prefix: "노인 인구 비율이 높은 상태로 나타나는 일을",
+        suffix: "라고 해요.",
         options: [
-            { text: "꼬불꼬불", correct: true },
-            { text: "보들보들", correct: false }
+            { text: "고령화", correct: true },
+            { text: "인구", correct: false }
         ]
     }
 ];
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page1.html';
+        window.location.href = 'page13.html';
     };
 });
 
@@ -62,11 +61,15 @@ function generateSentences() {
         sentenceRow.className = 'sentence-row';
         sentenceRow.dataset.sentence = index;
         
-        // prefix와 suffix 존재 여부에 따라 HTML 구성
+        // sentence-content div로 모든 내용을 감싸기
+        const sentenceContent = document.createElement('div');
+        sentenceContent.className = 'sentence-content';
+        
         let htmlContent = '';
+        let hasPrefix = sentence.prefix && sentence.prefix.trim() !== '';
         
         // prefix가 있으면 추가
-        if (sentence.prefix && sentence.prefix.trim() !== '') {
+        if (hasPrefix) {
             htmlContent += `<span class="sentence-text prefix-text">${sentence.prefix}</span>`;
         }
         
@@ -84,7 +87,14 @@ function generateSentences() {
             htmlContent += `<span class="sentence-text suffix-text">${sentence.suffix}</span>`;
         }
         
-        sentenceRow.innerHTML = htmlContent;
+        sentenceContent.innerHTML = htmlContent;
+        sentenceRow.appendChild(sentenceContent);
+        
+        // 첫 번째 요소가 answer-option인 경우 원형 불릿 위치 조정
+        if (!hasPrefix) {
+            sentenceRow.classList.add('starts-with-option');
+        }
+        
         sentencesArea.appendChild(sentenceRow);
     });
 }
@@ -94,7 +104,7 @@ function setupEventListeners() {
     const answerOptions = document.querySelectorAll('.answer-option');
     answerOptions.forEach(option => {
         option.addEventListener('click', function() {
-            const sentenceIndex = parseInt(this.parentElement.parentElement.dataset.sentence);
+            const sentenceIndex = parseInt(this.closest('.sentence-row').dataset.sentence);
             const isCorrect = this.dataset.correct === 'true';
             handleAnswer(this, sentenceIndex, isCorrect);
         });
@@ -108,7 +118,7 @@ function handleAnswer(selectedOption, sentenceIndex, isCorrect) {
         return;
     }
 
-    const sentenceRow = selectedOption.parentElement.parentElement;
+    const sentenceRow = selectedOption.closest('.sentence-row');
     const allOptions = sentenceRow.querySelectorAll('.answer-option');
     
     if (isCorrect) {
@@ -170,7 +180,7 @@ function hideIncorrectImage(option) {
         image.remove();
     }
     
-    // 스타일 원복 - 색상 변경 없음
+    // 스타일 원복
 }
 
 // 결과 팝업 표시
@@ -190,6 +200,7 @@ function resetQuiz() {
         if (image) {
             image.remove();
         }
+
         option.style.pointerEvents = 'auto';
         option.style.opacity = '1';
     });

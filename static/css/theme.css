@@ -75,9 +75,19 @@ body.theme-brown {
 .blank-area.dragover {
     border: 2px dotted var(--theme-color);
 }
+
 /* choice.css 요소들 */
 .select {
     border: 2pt dotted var(--theme-color);
+}
+
+/* select.css 요소들 */
+.sentence-row::before {
+    background-color: var(--theme-color);
+}
+
+.answer-option {
+    border-color: var(--theme-color);
 }
 
 

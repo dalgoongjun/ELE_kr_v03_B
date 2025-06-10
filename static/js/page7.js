@@ -1,25 +1,25 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit04/archeologist.svg',
+      image: './static/images/unit04/archeologist.png',
       question: '고고학(유물과 유적을 통하여 옛 인류의 생활, 문화 따위를 연구하는 학문)을 연구하는 사람.',
       answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 3,
     },
     {
-      image: './static/images/unit04/voice.svg',
+      image: './static/images/unit04/voice.png',
       question: '목소리로만 연기하는 배우.',
       answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 0,
     },
     {
-      image: './static/images/unit04/pilot.svg',
+      image: './static/images/unit04/pilot.png',
       question: '항공기를 일정한 방향과 속도로 움직이도록 다루는 기능과 자격을 갖춘 사람.',
       answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 1,
     },
     {
-      image: './static/images/unit04/patisserie.svg',
+      image: './static/images/unit04/patisserie.png',
       question: '빵을 만드는 일을 전문으로 하는 사람.',
       answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 2,

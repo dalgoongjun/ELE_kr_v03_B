@@ -9,13 +9,14 @@
 /* 문장 관련 스타일 */
 .sentence-row {
     display: flex;
-    height: 10vh;
+    min-height: 10vh;
     align-items: center;
     margin-left: 11vw;
-    margin-right: 10vw;
     margin-bottom: 3vh;
     font-size: calc(10vh * 0.35);
     position: relative;
+    flex-wrap: wrap;
+    line-height: 1.4;
 }
 
 .sentence-row::before {
@@ -28,17 +29,35 @@
     border-radius: 50%;
     margin-right: 1.5rem;
     flex-shrink: 0;
+    align-self: center;
+}
+
+/* 첫 번째 요소가 answer-option인 경우 */
+.sentence-row.starts-with-option::before {
+    align-self: center;
+}
+
+.sentence-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+    gap: 0.5rem;
+    min-height: 10vh;
 }
 
 .sentence-text {
-    margin-right: 1rem;
+    white-space: nowrap;
     position: relative;
+    line-height: 1.4;
+    margin-right: 0.5rem;
 }
 
 .answer-options {
     display: flex;
     gap: 0.5rem;
-    margin-right: 0.5rem;
+    flex-shrink: 0;
+    align-items: center;
 }
 
 .answer-option {
@@ -51,6 +70,8 @@
     transition: all 0.3s ease;
     position: relative;
     font-weight: bold;
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
 .answer-result-image {
@@ -77,6 +98,11 @@
         width: calc(10vh * 0.25);
         height: calc(10vh * 0.25);
         margin-right: 0.7rem;
+        align-self: center;
+    }
+
+    .sentence-row.starts-with-option::before {
+        align-self: center;
     }
 
     .sentence-text {
@@ -96,6 +122,11 @@
     .sentence-row::before {
         width: calc(10vh * 0.2);
         height: calc(10vh * 0.2);
+        align-self: center;
+    }
+
+    .sentence-row.starts-with-option::before {
+        align-self: center;
     }
 
     .sentence-text {
