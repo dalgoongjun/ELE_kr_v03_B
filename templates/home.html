@@ -1,60 +1,233 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korean Learning Interface</title>
-    <link rel="stylesheet" href="./static/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>어휘력이 독해력이다 3B</title>
+    <style>
+        /* 기본 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* 테마 색상 변수 */
+        :root {
+            --theme-color: #3498db;
+            --theme-color-light: rgba(166, 212, 242, 0.5);
+        }
+        
+        /* Header 스타일 */
+        .header {
+            display: flex;
+            color: white;
+            position: relative;
+            height: 13.6vh;
+            width: 100%;
+        }
+        
+        .number-box {
+            background-color: #000000;
+            width: calc(13.6vh * 1.3);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .number {
+            font-size: calc(13.6vh * 0.7);
+            font-weight: bold;
+            color: white;
+        }
+        
+        .triangle {
+            position: absolute;
+            right: -4.4vh;
+            top: 35%;
+            width: 0;
+            height: 0;
+            border-top: 2vh solid transparent;
+            border-bottom: 2vh solid transparent;
+            border-left: 4.4vh solid #000000;
+            z-index: 2;
+        }
+        
+        .title-box {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            background-color: var(--theme-color);
+            padding-left: calc(4.4vh + 2vh);
+        }
+        
+        .title {
+            font-size: calc(13.6vh * 0.4);
+            font-weight: bold;
+            color: white;
+        }
+        
+        /* Content 스타일 */
+        .content {
+            width: 100%;
+            height: calc(100vh - 13.6vh);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .home-description {
+            margin: 4vh 8vw;
+            text-align: center;
+            max-width: 80vw;
+        }
+        
+        .home-description p {
+            font-size: calc(4vh);
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 3vh;
+            background-color: #f8f9fa;
+            border-radius: 1vh;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            word-break: keep-all;
+        }
+        
+        /* 학습 시작 버튼 */
+        .start-button {
+            width: 10vw;
+            height: 10vh;
+            background-color: var(--theme-color);
+            color: white;
+            border: none;
+            border-radius: 1vh;
+            font-size: calc(3vh);
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 3vh;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+        }
+        
+        .start-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .start-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        /* 반응형 디자인 */
+        @media only screen and (max-width: 932px) {
+            .header {
+                height: 12vh;
+            }
+            
+            .number-box {
+                width: calc(12vh * 1.3);
+            }
+            
+            .number {
+                font-size: calc(12vh * 0.7);
+            }
+            
+            .triangle {
+                right: -3.6vh;
+                border-left: 3.6vh solid #000000;
+                border-top: 1.8vh solid transparent;
+                border-bottom: 1.8vh solid transparent;
+            }
+            
+            .title {
+                font-size: calc(12vh * 0.4);
+            }
+            
+            .title-box {
+                padding-left: calc(3.6vh + 1.5vh);
+            }
+            
+            .content {
+                height: calc(100vh - 12vh);
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .home-description {
+                margin: 3vh 4vw;
+                max-width: 92vw;
+            }
+            
+            .home-description p {
+                font-size: calc(3vh);
+                padding: 2vh;
+            }
+            
+            .start-button {
+                width: 15vw;
+                height: 8vh;
+                font-size: calc(2.5vh);
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .home-description p {
+                font-size: calc(2.5vh);
+                padding: 1.5vh;
+            }
+            
+            .start-button {
+                width: 20vw;
+                height: 7vh;
+                font-size: calc(2vh);
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
-        <div style="display: flex; align-items: center;">
-            <div class="number">01</div>
-            <div class="title">흑부리 영감</div>
+        <div class="number-box">
+            <div class="number">3B</div>
+            <div class="triangle"></div>
         </div>
-        <div class="buttons">
-            <div class="btn active">활동</div>
-            <div class="btn inactive">낱말 고르기</div>
+        <div class="title-box">
+            <div class="title">어휘력이 독해력이다 디지털 학습 자료</div>
         </div>
     </div>
-    
+
     <div class="content">
-        <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-instruction">다음 설명에 알맞은 말을 골라보세요.</div>
-        </div>
-        
-        <div class="exercise-container">
-            <div class="question-number">문제 <span id="current-question">1</span>/4</div>
-            
-            <div class="exercise-content">
-                <div class="pic-section">
-                    <img id="question-image" src="./static/images/unit01" alt="질문 이미지">
-                </div>
-                <div class="question-section">
-                    <p id="question-text">여기에 문제 내용이 들어갑니다. 위 그림을 보고 알맞은 단어를 선택하세요.</p>
-                </div>
-            </div>
-            
-            <div class="answers-container">
-                <div class="answer-option" data-index="0">첫번째 단어</div>
-                <div class="answer-option" data-index="1">두번째 단어</div>
-                <div class="answer-option" data-index="2">세번째 단어</div>
-                <div class="answer-option" data-index="3">네번째 단어</div>
-            </div>
-            
-            <div id="feedback-message" class="feedback hidden"></div>
+        <div class="home-description">
+            <p>디지털 학습 자료의 어휘들은 본문의 학습 어휘의 사전적 설명으로
+                구성되었습니다. 『표준국어대사전』, 『한국어기초사전』, 『우리말샘』을 
+                참고하였으며 사전적 설명이 어려운 경우 이해하기 쉽게 풀어 설명했습니다.
+            </p>
+            <button class="start-button" id="startButton">학습 시작!</button>
         </div>
     </div>
-    
-    <div id="completion-popup" class="popup hidden" style="display:none;">
-        <div class="popup-content">
-            <h2>참 잘했어요!</h2>
-            <p>모든 문제를 성공적으로 완료했습니다.</p>
-            <button id="restart-button">다시 시작</button>
-        </div>
-    </div>
-    
-    <script src="./static/js/script.js"></script>
+
+    <script>
+        // 학습 시작 버튼 클릭 이벤트
+        document.getElementById('startButton').addEventListener('click', function() {
+            window.location.href = 'page1.html';
+        });
+    </script>
 </body>
+
 </html>

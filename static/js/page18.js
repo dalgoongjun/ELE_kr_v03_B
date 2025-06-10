@@ -59,11 +59,15 @@ function generateSentences() {
         sentenceRow.className = 'sentence-row';
         sentenceRow.dataset.sentence = index;
         
-        // prefix와 suffix 존재 여부에 따라 HTML 구성
+        // sentence-content div로 모든 내용을 감싸기
+        const sentenceContent = document.createElement('div');
+        sentenceContent.className = 'sentence-content';
+        
         let htmlContent = '';
+        let hasPrefix = sentence.prefix && sentence.prefix.trim() !== '';
         
         // prefix가 있으면 추가
-        if (sentence.prefix && sentence.prefix.trim() !== '') {
+        if (hasPrefix) {
             htmlContent += `<span class="sentence-text prefix-text">${sentence.prefix}</span>`;
         }
         
@@ -81,7 +85,14 @@ function generateSentences() {
             htmlContent += `<span class="sentence-text suffix-text">${sentence.suffix}</span>`;
         }
         
-        sentenceRow.innerHTML = htmlContent;
+        sentenceContent.innerHTML = htmlContent;
+        sentenceRow.appendChild(sentenceContent);
+        
+        // 첫 번째 요소가 answer-option인 경우 원형 불릿 위치 조정
+        if (!hasPrefix) {
+            sentenceRow.classList.add('starts-with-option');
+        }
+        
         sentencesArea.appendChild(sentenceRow);
     });
 }
@@ -91,7 +102,7 @@ function setupEventListeners() {
     const answerOptions = document.querySelectorAll('.answer-option');
     answerOptions.forEach(option => {
         option.addEventListener('click', function() {
-            const sentenceIndex = parseInt(this.parentElement.parentElement.dataset.sentence);
+            const sentenceIndex = parseInt(this.closest('.sentence-row').dataset.sentence);
             const isCorrect = this.dataset.correct === 'true';
             handleAnswer(this, sentenceIndex, isCorrect);
         });
@@ -105,7 +116,7 @@ function handleAnswer(selectedOption, sentenceIndex, isCorrect) {
         return;
     }
 
-    const sentenceRow = selectedOption.parentElement.parentElement;
+    const sentenceRow = selectedOption.closest('.sentence-row');
     const allOptions = sentenceRow.querySelectorAll('.answer-option');
     
     if (isCorrect) {
@@ -146,7 +157,6 @@ function showCorrectImage(option) {
     option.appendChild(image);
     
     // 선택된 옵션 스타일 변경
-
     option.style.pointerEvents = 'none';
 }
 
@@ -159,7 +169,6 @@ function showIncorrectImage(option) {
     option.appendChild(image);
     
     // 선택된 옵션 임시 스타일 변경
-
 }
 
 // 오답 이미지 제거
@@ -170,7 +179,6 @@ function hideIncorrectImage(option) {
     }
     
     // 스타일 원복
-
 }
 
 // 결과 팝업 표시
