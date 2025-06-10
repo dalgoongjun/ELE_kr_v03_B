@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit12/downstream.svg',
+      question: '목과 다리가 길며 등에 지방을 저장하는 혹이 있는 동물.',
+      answers: ['상류', '하류', '강폭', '경사'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit12/upperreaches.svg',
+      question: '강이나 내(개울)의 발원지에 가까운 부분.',
+      answers: ['상류', '하류', '강폭', '경사'],
+      correct: 0,
+    },
+    {
+      image: './static/images/unit12/slope.svg',
+      question: '비스듬히 기울어짐. 또는 그런 상태나 정도.',
+      answers: ['상류', '하류', '강폭', '경사'],
       correct: 3,
+    },
+    {
+      image: './static/images/unit12/riverwidth.svg',
+      question: '강을 가로질러 잰 길이. 강의 너비를 이른다.',
+      answers: ['상류', '하류', '강폭', '경사'],
+      correct: 2,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page19.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page20.html';
       };
     }
   

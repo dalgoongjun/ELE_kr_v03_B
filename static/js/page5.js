@@ -1,27 +1,27 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit03/sawing.svg',
+      question: '헤지거나 뚫어진 데를 바늘로 깁거나 얽어매다.',
+      answers: ['꿰매다', '빻다', '재배하다', '짓다'],
       correct: 0,
     },
     {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit03/harvest.svg',
+      question: '식물을 심어 가꾸다.',
+      answers: ['꿰매다', '빻다', '재배하다', '짓다'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit03/grind.svg',
+      question: '물기가 없는 것을 짓찧어서 가루로 만들다.',
+      answers: ['꿰매다', '빻다', '재배하다', '짓다'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit03/make.svg',
+      question: '재료를 들여 밥, 옷, 집 따위를 만들다.',
+      answers: ['꿰매다', '빻다', '재배하다', '짓다'],
       correct: 3,
     },
   ];
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page5.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page6.html';
       };
     }
   

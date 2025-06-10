@@ -1,33 +1,33 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "어떤 특정한 음식만 가려서 먹는",
+        suffix: "을 하면",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "과식", correct: false },
+            { text: "편식", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "해질 수 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "수척", correct: true },
+            { text: "비만", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "는 도구나 기구 없이 할 수 있는 운동으로,",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "자전거", correct: false },
+            { text: "맨손 체조", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "기초",
+        suffix: "을 기르며 비만을 예방해요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "소음", correct: false },
+            { text: "체력", correct: true }
         ]
     }
 ];
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page31.html';
     };
 });
 

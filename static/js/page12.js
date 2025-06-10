@@ -1,33 +1,35 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "청동기 시대에는",
+        suffix: "로 곡식을 수확했어요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "토기", correct: false },
+            { text: "반달 돌칼", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "청동기 시대에는",
+        suffix: "에 곡식을 담았어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "토기", correct: true },
+            { text: "반달 돌칼", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "청동기 시대의",
+        suffix: "은 하늘에 제사를 지냈어요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "제사장", correct: true },
+            { text: "청동", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "청동기 시대에는",
+        suffix: "으로 도구를 만들었어요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "제사장", correct: false },
+            { text: "청동", correct: true }
         ]
     }
 ];
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page11.html';
     };
 });
 

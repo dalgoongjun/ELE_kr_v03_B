@@ -1,33 +1,32 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        suffix: "은 시끄러운 소리예요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "확성기", correct: false },
+            { text: "소음", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "를 사용하면 소리를 크게 할 수 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "확성기", correct: true },
+            { text: "방음벽", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        suffix: "으로 소리가 새어 나가는 것을 막을 수 있어요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "확성기", correct: false },
+            { text: "방음벽", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "주의나 경계를 하도록 큰 소리로",
+        suffix: "을 울려요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "경적", correct: true },
+            { text: "귓속말", correct: false }
         ]
     }
 ];
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page23.html';
     };
 });
 

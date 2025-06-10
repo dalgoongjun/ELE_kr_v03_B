@@ -1,33 +1,33 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        suffix: "는 조선 후기의 풍속 화가로",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "김홍도", correct: true },
+            { text: "이순신", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "그의",
+        suffix: "에는 조선 시대 사람들의 모습이 생생하게 담겨 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "풍속화", correct: true },
+            { text: "조각가", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "그의 대표 작품으로 씨름 경기의 모습을 그린",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "씨름도", correct: true },
+            { text: "미인도", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "서당의 모습을 그린",
+        suffix: "가 있어요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "서당도", correct: true },
+            { text: "풍류도", correct: false }
         ]
     }
 ];
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page29.html';
     };
 });
 

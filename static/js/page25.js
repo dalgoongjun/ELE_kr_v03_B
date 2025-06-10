@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
+      image: './static/images/unit16/swan.png',
+      question: '고상하고 기품이 있으며 아름답다.',
+      answers: ['경쾌하다', '늠름하다', '재빠르다', '우아하다'],
+      correct: 3,
     },
     {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit16/donkey.png',
+      question: '동작 따위가 재고 빠르다.',
+      answers: ['경쾌하다', '늠름하다', '재빠르다', '우아하다'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit16/lion.png',
+      question: '생김새나 태도가 의젓하고 당당하다.',
+      answers: ['경쾌하다', '늠름하다', '재빠르다', '우아하다'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 3,
+      image: './static/images/unit16/chicken.png',
+      question: '움직임이나 모습, 기분 따위가 가볍고 상쾌하다.',
+      answers: ['경쾌하다', '늠름하다', '재빠르다', '우아하다'],
+      correct: 0,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page25.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page26.html';
       };
     }
   

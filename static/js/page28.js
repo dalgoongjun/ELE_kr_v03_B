@@ -1,33 +1,32 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        suffix: "은 고물을 사고 파는 장사예요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "자연환경", correct: false },
+            { text: "고물상", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "은 못 쓰게 되어 버린 물품이에요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "폐품", correct: true },
+            { text: "재사용", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "한 번 썼던 물건을 다시 쓰거나 고쳐서",
+        suffix: "해요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "재사용", correct: true },
+            { text: "폐품", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        suffix: "을 보호해요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "자연환경", correct: true },
+            { text: "고물상", correct: false }
         ]
     }
 ];
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page27.html';
     };
 });
 

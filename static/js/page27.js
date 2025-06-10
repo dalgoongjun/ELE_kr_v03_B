@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit17/junkshop.svg',
+      question: '고물을 사고 파는 장사. 또는 그런 장수.',
+      answers: ['폐품', '재사용', '고물상', '자연환경'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 1,
+      image: './static/images/unit17/waste.svg',
+      question: '못 쓰게 되어 버린 물품.',
+      answers: ['폐품', '재사용', '고물상', '자연환경'],
+      correct: 0,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit17/nature.svg',
+      question: '인간 생활을 둘러싸고 있는 자연계의 모든 요소가 이루는 환경.',
+      answers: ['폐품', '재사용', '고물상', '자연환경'],
       correct: 3,
+    },
+    {
+      image: './static/images/unit17/recycle.svg',
+      question: '한번 썼던 물건 따위를 다시 쓰거나 일정한 목적이나 기능에 맞게 고쳐서 씀.',
+      answers: ['폐품', '재사용', '고물상', '자연환경'],
+      correct: 1,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page27.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page28.html';
       };
     }
   

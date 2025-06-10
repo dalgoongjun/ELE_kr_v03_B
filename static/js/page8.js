@@ -1,33 +1,35 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "목소리로만 연기하는 배우는",
+        suffix: "입니다.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "조종사", correct: false },
+            { text: "성우", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "비행기를 조종하는 사람은",
+        suffix: "입니다.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "제빵사", correct: false },
+            { text: "조종사", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "고고학을 연구하는 사람은",
+        suffix: "입니다.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "고고학자", correct: true },
+            { text: "성우", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "빵을 만드는 일을 전문으로 하는 사람은",
+        suffix: "입니다.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "제빵사.", correct: true },
+            { text: "고고학자", correct: false }
         ]
     }
 ];
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page7.html';
     };
 });
 

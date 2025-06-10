@@ -1,33 +1,31 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "자전거 바퀴에서 공기가",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "빠지면,", correct: true },
+            { text: "채우면,", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "자전거 바퀴가",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "찌그러져요.", correct: true },
+            { text: "부풀어요.", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "반대로 자전거 바퀴에 공기를",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "빼면,", correct: false },
+            { text: "채우면,", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "자전거 바퀴가",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "부풀어요.", correct: false },
+            { text: "찌그러져요.", correct: true }
         ]
     }
 ];
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page21.html';
     };
 });
 

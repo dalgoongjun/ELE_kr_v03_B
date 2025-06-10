@@ -1,33 +1,33 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "강의",
+        suffix: "는 강이 시작되는 곳에서 가까워요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "상류", correct: true },
+            { text: "하류", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "는 비스듬히 기울어진 정도를 뜻해요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "강폭", correct: false },
+            { text: "경사", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        suffix: "은 강을 가로질러 잰 길이를 뜻해요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "강폭", correct: true },
+            { text: "경사", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "강의",
+        suffix: "는 강의 아랫부분이에요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "상류", correct: false },
+            { text: "하류", correct: true }
         ]
     }
 ];
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page19.html';
     };
 });
 

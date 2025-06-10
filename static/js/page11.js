@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit07/priest.png',
+      question: '제사를 지내는 일정한 법을 알고, 신기한 징조나 경험을 얻게 하는 사람.',
+      answers: ['반달 돌칼', '토기', '제사장', '청동'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 1,
+      image: './static/images/unit07/stoneknife.png',
+      question: '원시 시대에 이삭을 따는 데 쓰던 반달 모양의 석기.',
+      answers: ['반달 돌칼', '토기', '제사장', '청동'],
+      correct: 0,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit07/mirror.png',
+      question: '구리와 주석의 합금.',
+      answers: ['반달 돌칼', '토기', '제사장', '청동'],
       correct: 3,
+    },
+    {
+      image: './static/images/unit07/pottery.png',
+      question: '원시 시대에 쓰던, 흙으로 만든 그릇.',
+      answers: ['반달 돌칼', '토기', '제사장', '청동'],
+      correct: 1,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page11.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page12.html';
       };
     }
   

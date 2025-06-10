@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
+      image: './static/images/unit11/camel.png',
+      question: '목과 다리가 길며 등에 지방을 저장하는 혹이 있는 동물.',
+      answers: ['사막', '전갈', '사막여우', '낙타'],
+      correct: 3,
     },
     {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit11/fox.png',
+      question: '몸에 비해 귀가 크며, 사막에 굴을 파서 생활하는 동물.',
+      answers: ['사막', '전갈', '사막여우', '낙타'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit11/scorpion.png',
+      question: '몸은 짧은 머리와 가슴, 좁고 긴 배로 나뉘며 꼬리 끝에 독침이 있는 동물.',
+      answers: ['사막', '전갈', '사막여우', '낙타'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 3,
+      image: './static/images/unit11/dessert.png',
+      question: '강수량이 적어서 식물 집단이 보이지 않거나 적고, 인간의 활동도 제약되는 지역.',
+      answers: ['사막', '전갈', '사막여우', '낙타'],
+      correct: 0,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page17.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page18.html';
       };
     }
   

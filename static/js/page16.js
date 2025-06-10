@@ -1,33 +1,33 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "횡단보도를 건너기 전",
+        suffix: "안에 서요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "안전선", correct: true },
+            { text: "차도", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "교통안전 규칙을 지키지 않으면",
+        suffix: "가 날 수 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "교통사고", correct: true },
+            { text: "안전선", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        suffix: "는 자동차가 다니는 길이예요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "차도", correct: true },
+            { text: "교통 신호", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        suffix: "를 지키며 안전하게 다녀요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "교통 신호", correct: true },
+            { text: "교통사고", correct: false }
         ]
     }
 ];
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page15.html';
     };
 });
 

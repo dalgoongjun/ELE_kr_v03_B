@@ -1,33 +1,34 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "혼자 살아가는",
+        suffix: "로 곡식을 수확했어요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "1인 가구", correct: true },
+            { text: "고령화", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "국적과 문화가 다른 사람들이 함께 사는",
+        suffix: "을 쉽게 볼 수 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "다문화 가족", correct: true },
+            { text: "1인 가구", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        suffix: "는 일정한 지역에 사는 사람의 수예요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "다문화 가족", correct: false },
+            { text: "인구", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "노인 인구 비율이 높은 상태로 나타나는 일을",
+        suffix: "라고 해요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "고령화", correct: true },
+            { text: "인구", correct: false }
         ]
     }
 ];
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page13.html';
     };
 });
 

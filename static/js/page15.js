@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit09/safeline.png',
+      question: '안전을 위해 그어 놓은 선.',
+      answers: ['교통사고', '안전선', '교통 신호', '차도'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit09/traffic.png',
+      question: '교차로나 횡단보도, 건널목 따위에서 사람이나 차량이 질서 있게 길을 가도록 신호 따위로 진행, 정지, 방향, 전환, 주의 따위를 나타내는 신호.',
+      answers: ['교통사고', '안전선', '교통 신호', '차도'],
+      correct: 2,
+    },
+    {
+      image: './static/images/unit09/road.png',
+      question: '사람이 다니는 길 따위와 구분하여 자동차만 다니게 한 길.',
+      answers: ['교통사고', '안전선', '교통 신호', '차도'],
       correct: 3,
+    },
+    {
+      image: './static/images/unit09/accident.png',
+      question: '운행 중이던 자동차나 기차 따위가 사람을 치거나 다른 교통 기관과 충돌하는 따위의 교통상의 사고.',
+      answers: ['교통사고', '안전선', '교통 신호', '차도'],
+      correct: 0,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page15.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page16.html';
       };
     }
   

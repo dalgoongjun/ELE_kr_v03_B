@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit08/multiculture.svg',
+      question: '국적과 문화적 배경이 서로 다른 사람들로이루어진 가정.',
+      answers: ['인구', '고령화', '1인 가구', '다문화 가족'],
+      correct: 3,
+    },
+    {
+      image: './static/images/unit08/population.svg',
+      question: '일정한 지역에 사는 사람의 수.',
+      answers: ['인구', '고령화', '1인 가구', '다문화 가족'],
       correct: 0,
     },
     {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit08/singlehouse.svg',
+      question: '구성원이 한 명인 가구.',
+      answers: ['인구', '고령화', '1인 가구', '다문화 가족'],
       correct: 2,
     },
     {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit08/aging.svg',
+      question: '한 사회에서 노인의 인구 비율이 높은 상태로 나타나는 일.',
+      answers: ['인구', '고령화', '1인 가구', '다문화 가족'],
       correct: 1,
-    },
-    {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 3,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page13.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page14.html';
       };
     }
   

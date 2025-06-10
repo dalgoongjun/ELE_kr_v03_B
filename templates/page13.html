@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>어휘력이 독해력이다 3B</title>
+    <link rel="stylesheet" href="./static/css/common.css">
+    <link rel="stylesheet" href="./static/css/choice.css">
+</head>
+<body>
+    <!-- 헤더 부분 -->
+    <div class="header">
+        <div class="number-box">
+            <div class="number">08</div>
+            <div class="triangle"></div>
+        </div>
+        <div class="title-box">
+            <div class="title">사회 변화로 달라진 모습</div>
+        </div>
+        <div class="activity-button">
+            <img src="./static/images/base/act_choice.svg" alt="단어선택 활동">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="instruction">
+            <div class="step-number">1</div>
+            <div class="step-text">다음 설명에 알맞은 말을 골라 보세요.</div>
+        </div>
+        <!-- 문제 세트가 동적으로 들어가는 영역 -->
+        <div id="problems-wrapper"></div>
+    </div>
+    
+    <!-- 정답 팝업 -->
+    <div id="correct-popup" class="popup correct-popup" style="display:none;">
+        <div class="popup-content">
+            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
+        </div>
+    </div>
+    
+    <!-- 오답 팝업 -->
+    <div id="incorrect-popup" class="popup incorrect-popup" style="display:none;">
+        <div class="popup-content">
+            <!-- 여기에 랜덤 이미지가 동적으로 삽입됩니다 -->
+        </div>
+    </div>
+    
+    <!-- 결과 팝업 -->
+    <div id="result-popup" class="popup result-popup" style="display:none;">
+        <div class="popup-content">
+            <img src="./static/images/base/elekr_allgood.svg" alt="결과">
+            <div class="popup-buttons">
+                <button id="restart-btn" class="popup-button">다시 시작</button>
+                <button id="nav-btn" class="popup-button">다음 문제</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/theme.js"></script>
+    <script src="./static/js/orientation-lock.js"></script>
+    <script src="./static/js/page13.js"></script>
+</body>
+</html>

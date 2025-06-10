@@ -1,33 +1,32 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "비가 거의 내리지 않는",
+        suffix: "에서도 동물이 살아요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "사막", correct: true },
+            { text: "산", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "는 등에 큰 혹이 있어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "펭귄", correct: false },
+            { text: "낙타", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        suffix: "는 몸에 비해 귀가 커요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "북극여우", correct: false },
+            { text: "사막여우", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        suffix: "은 꼬리 끝에 독침이 있어요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "전갈", correct: true },
+            { text: "뱀", correct: false }
         ]
     }
 ];
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page17.html';
     };
 });
 

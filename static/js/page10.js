@@ -1,33 +1,34 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "감자나 배추 같은 채소를 기르는",
+        suffix: "를 해요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "밭농사", correct: true },
+            { text: "논농사", correct: false }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        suffix: "을 캐서 음식을 만들어 먹어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "산나물", correct: true },
+            { text: "해산물", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "등산을 할 때,",
+        suffix: "를 따라 걸어요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "차도", correct: false },
+            { text: "등산로", correct: true }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "사과나무를 심은",
+        suffix: "에서 사과를 따요.",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "과수원", correct: true },
+            { text: "산나물", correct: false }
         ]
     }
 ];
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page9.html';
     };
 });
 

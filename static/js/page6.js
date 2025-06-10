@@ -1,33 +1,34 @@
 // 문제 데이터
 const sentences = [
     {
-        prefix: "갯벌에는",
-        suffix: "가 살아요.",
+        prefix: "바늘로 가죽을",
+        suffix: "옷을 만들어요.",
         options: [
-            { text: "무당벌레", correct: false },
-            { text: "갯지렁이", correct: true }
+            { text: "오려서", correct: false },
+            { text: "꿰매서", correct: true }
         ]
     },
     {
-        prefix: "바닷물이 빠지면 진흙 벌판인",
-        suffix: "이 드러나요.",
+        prefix: "밀을",
+        suffix: "밀가루를 만들어요.",
         options: [
-            { text: "갯벌", correct: true },
-            { text: "수영장", correct: false }
+            { text: "빻아서", correct: true },
+            { text: "구워서", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 밀려와요.",
+        prefix: "곡식을",
+        suffix: "식량을 마련해요.",
         options: [
-            { text: "밀물", correct: true },
-            { text: "썰물", correct: false }
+            { text: "재배해서", correct: true },
+            { text: "팔아서", correct: false }
         ]
     },
     {
-        suffix: "에 바닷물이 빠져요.",
+        prefix: "튼튼하고 안전하게 집을",
         options: [
-            { text: "썰물", correct: true },
-            { text: "밀물", correct: false }
+            { text: "팔아요.", correct: false },
+            { text: "지어요.", correct: true }
         ]
     }
 ];
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 이전 문제 버튼
     document.getElementById('nav-btn').onclick = function() {
-        window.location.href = 'page3.html';
+        window.location.href = 'page5.html';
     };
 });
 

@@ -1,27 +1,27 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit18/genrepaint.png',
+      question: '그 시대 세상의 사정이나 형편, 사람들의 인심, 풍습을 그린 그림.',
+      answers: ['김홍도', '풍속화', '씨름도', '서당도'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit18/wrestling.png',
+      question: '씨름 경기 모습을 그린 그림.',
+      answers: ['김홍도', '풍속화', '씨름도', '서당도'],
+      correct: 2,
+    },
+    {
+      image: './static/images/unit18/kimhongdo.png',
+      question: '조선 후기의 풍속 화가.',
+      answers: ['김홍도', '풍속화', '씨름도', '서당도'],
+      correct: 0,
+    },
+    {
+      image: './static/images/unit18/teaching.png',
+      question: '옛날에 한자를 가르치고 배우던 곳인 서당의 모습을그린 그림.',
+      answers: ['김홍도', '풍속화', '씨름도', '서당도'],
       correct: 3,
     },
   ];
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page29.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page30.html';
       };
     }
   

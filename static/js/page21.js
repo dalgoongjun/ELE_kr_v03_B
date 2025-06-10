@@ -1,27 +1,27 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 0,
-    },
-    {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit13/crushed.svg',
+      question: '짓눌려서 여기저기 고르지 아니하게 우그러지다.',
+      answers: ['빠지다', '찌그러지다', '부풀다', '채우다'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit13/losewind.svg',
+      question: '속에 있는 액체나 기체 또는 냄새 따위가 밖으로 새어 나가거나 흘러 나가다.',
+      answers: ['빠지다', '찌그러지다', '부풀다', '채우다'],
+      correct: 0,
+    },
+    {
+      image: './static/images/unit13/inflate.svg',
+      question: '물체가 늘어나면서 부피가 커지다.',
+      answers: ['빠지다', '찌그러지다', '부풀다', '채우다'],
+      correct: 2,
+    },
+    {
+      image: './static/images/unit13/pumpedair.svg',
+      question: '일정한 공간에 사람, 사물, 냄새 따위를 가득하게 하다.',
+      answers: ['빠지다', '찌그러지다', '부풀다', '채우다'],
       correct: 3,
     },
   ];
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page21.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page22.html';
       };
     }
   

@@ -1,28 +1,28 @@
 // 문제 데이터 (이미지, 문제, 보기는 원하는 내용/경로로 교체)
 const problems = [
     {
-      image: './static/images/unit02/ebbtide.svg',
-      question: '바닷물이 주기적으로 밀려나가서 해수면이 낮아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit04/archeologist.svg',
+      question: '고고학(유물과 유적을 통하여 옛 인류의 생활, 문화 따위를 연구하는 학문)을 연구하는 사람.',
+      answers: ['성우', '조종사', '제빵사', '고고학자'],
+      correct: 3,
+    },
+    {
+      image: './static/images/unit04/voice.svg',
+      question: '목소리로만 연기하는 배우.',
+      answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 0,
     },
     {
-      image: './static/images/unit02/mudflat.svg',
-      question: '바닷물이 빠졌을 때 드러나는 넓은 진흙 벌판.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 2,
-    },
-    {
-      image: './static/images/unit02/lugworm.svg',
-      question: '갯벌에 사는 지렁이.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
+      image: './static/images/unit04/pilot.svg',
+      question: '항공기를 일정한 방향과 속도로 움직이도록 다루는 기능과 자격을 갖춘 사람.',
+      answers: ['성우', '조종사', '제빵사', '고고학자'],
       correct: 1,
     },
     {
-      image: './static/images/unit02/risingtide.svg',
-      question: '바닷물이 주기적으로 밀려 들어와서 해수면이 높아지는 현상. 또는 그 바닷물.',
-      answers: ['썰물', '갯지렁이', '갯벌', '밀물'],
-      correct: 3,
+      image: './static/images/unit04/patisserie.svg',
+      question: '빵을 만드는 일을 전문으로 하는 사람.',
+      answers: ['성우', '조종사', '제빵사', '고고학자'],
+      correct: 2,
     },
   ];
   
@@ -166,12 +166,12 @@ const problems = [
     if (direction === 'prev') {
       navBtn.textContent = '이전 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page3.html';
+        window.location.href = 'page7.html';
       };
     } else {
       navBtn.textContent = '다음 문제';
       navBtn.onclick = () => {
-        window.location.href = 'page4.html';
+        window.location.href = 'page8.html';
       };
     }
   
