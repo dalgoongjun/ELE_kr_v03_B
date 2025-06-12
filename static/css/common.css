@@ -212,12 +212,13 @@ body.theme-brown {
 
 
 .popup-button {
-    background: var(--theme-color);
-    color: #fff;
+    background: var(--theme-color-light);
+    color: var(--theme-color);
     border: none;
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem 2rem;
     font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -293,7 +294,8 @@ body.theme-brown {
     }
 
     .popup-button{
-        font-size: 1rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
