@@ -25,7 +25,7 @@ const sentences = [
         ]
     },
     {
-        prefix: "백조가 고상하고 기품 있게 헤엄 쳐요. 이런 모습을",
+        prefix: "백조가 고상하고 기품 있게 헤엄쳐요. 이런 모습을",
         suffix: "고 해요.",
         options: [
             { text: "경쾌하다", correct: false },

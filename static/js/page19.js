@@ -2,7 +2,7 @@
 const problems = [
     {
       image: './static/images/unit12/downstream.svg',
-      question: '목과 다리가 길며 등에 지방을 저장하는 혹이 있는 동물.',
+      question: '강이나 내(개울)의 아래쪽 부분.',
       answers: ['상류', '하류', '강폭', '경사'],
       correct: 1,
     },

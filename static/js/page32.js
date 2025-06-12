@@ -11,8 +11,8 @@ const sentences = [
     {
         suffix: "해질 수 있어요.",
         options: [
-            { text: "수척", correct: true },
-            { text: "비만", correct: false }
+            { text: "수척", correct: false },
+            { text: "비만", correct: true }
         ]
     },
     {

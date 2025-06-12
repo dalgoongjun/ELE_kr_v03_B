@@ -2,7 +2,7 @@
 const sentences = [
     {
         prefix: "혼자 살아가는",
-        suffix: "로 곡식을 수확했어요.",
+        suffix: "가 늘어나고 있어요.",
         options: [
             { text: "1인 가구", correct: true },
             { text: "고령화", correct: false }
